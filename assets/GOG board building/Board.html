@@ -32,111 +32,116 @@
 </head>
 <body>
 
-  <div class="game_board_container">
-    <table id="game_board">
-      
+  <div id="Game_timer">
+    <div class="timer" id="opponent_time_left"></div>
+    <div class="timer" id="turn_teller"></div>
+    <div class="timer" id="player_time_left"></div>
+  </div>
+
+  <table id="game_board">
+
   <!--Since theres a space like "coulmn a" it has 2 classes, coulmn and a, I did this so we can style by coulmn and by row and we can make coordinates like a1-->
 
   <img id="piece" src="Philippines.png" draggable="true" ondragstart="drag(event)" width="90px">
 
-      <tr class="row R1">
-        <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-      <tr>
+    <tr class="row R1">
+      <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <tr>
 
-      <tr class="row R2">
-        <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-      <tr>
+    <tr class="row R2">
+      <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <tr>
 
-      <tr class="row R3">
-        <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-      <tr>
+    <tr class="row R3">
+      <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <tr>
 
-      <tr class = "row R4">
-        <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-      <tr>
+    <tr class = "row R4">
+      <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <tr>
 
-      <tr class = "row R5">
-        <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-      <tr>
+    <tr class = "row R5">
+      <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <tr>
 
-      <tr class = "row R6">
-        <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-      <tr>
+    <tr class = "row R6">
+      <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <tr>
 
-      <tr class = "row R7">
-        <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-      <tr>
+    <tr class = "row R7">
+      <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <tr>
 
-      <tr class = "row R8">
-        <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-        <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
-      <tr>
+    <tr class = "row R8">
+      <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column b" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column c" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column d" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column e" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column f" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column g" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column h" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+      <td class = "column i" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
+    <tr>
 
-    </table>
-  </div>
+  </table>
+
 
 </body>
 </html>
