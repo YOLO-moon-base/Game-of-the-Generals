@@ -4,11 +4,12 @@ function allowDrop(ev) {
 
 function drag(ev) {
   ev.dataTransfer.setData("img", ev.target.id);
-  document.getElementById("piece").addEventListener("dragstart", function(e) {
+  
+  /* document.getElementById("piece").addEventListener("dragstart", function(e) {
   var img = document.createElement("img");
   img.src = "../images/invis.png";
   e.dataTransfer.setDragImage(img, 0, 0);
-  }, false);
+  }, false); */
 }
 
 function drop(ev) {
