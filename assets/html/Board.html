@@ -5,44 +5,43 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>GOG Board</title>
 
-  <link rel="stylesheet" href="board_theme1.css">
-
-  <script>
-    function allowDrop(ev) {
-      ev.preventDefault();
-    }
-    
-    function drag(ev) {
-      ev.dataTransfer.setData("img", ev.target.id);
-      document.getElementById("piece").addEventListener("dragstart", function(e) {
-      var img = document.createElement("img");
-      img.src = "invis.png";
-      e.dataTransfer.setDragImage(img, 0, 0);
-      }, false);
-    }
-    
-    function drop(ev) {
-      ev.preventDefault();
-      var data = ev.dataTransfer.getData("img");
-      ev.target.appendChild(document.getElementById(data));
-    }
-    </script>
-
+  <link rel="stylesheet" href="../css/default_board_theme.css">
 
 </head>
 <body>
 
+  <!--Game Timer-->
   <div id="Game_timer">
     <div class="timer" id="opponent_time_left"></div>
     <div class="timer" id="turn_teller"></div>
     <div class="timer" id="player_time_left"></div>
   </div>
 
+  <!--Setup Tabs-->
+    <!--Tab Buttons-->
+  <div id="setup_tabs">
+    <button class="tablinks" onclick="open_tab(event, 'setup')" id="default_tab">Setup</button>
+    <button class="tablinks" onclick="open_tab(event, 'layouts')">Layouts</button>
+
+    <!--Tab Contents-->
+    <div id="setup" class="tabcontent">
+      <h3>Manual Setup</h3>
+
+        <img id="piece" src="../images/Philippines.png" draggable="true" ondragstart="drag(event)" width="90px">
+
+    </div>
+    
+    <div id="layouts" class="tabcontent">
+      <h3>Saved Layouts</h3>
+        <p>saved setup 1</p>
+        <p>saved setup 2</p>
+    </div>
+  </div>
+
+ 
+  <!--Game Board-->
+    <!--Since theres a space like "coulmn a" it has 2 classes, coulmn and a, I did this so we can style by coulmn and by row and we can make coordinates like a1-->
   <table id="game_board">
-
-  <!--Since theres a space like "coulmn a" it has 2 classes, coulmn and a, I did this so we can style by coulmn and by row and we can make coordinates like a1-->
-
-  <img id="piece" src="Philippines.png" draggable="true" ondragstart="drag(event)" width="90px">
 
     <tr class="row R1">
       <td class = "column a" ondrop="drop(event)" ondragover="allowDrop(event)"></td>
@@ -142,6 +141,8 @@
 
   </table>
 
-
+  <!--SCRIPTS-->
+  <script src="../javascript/drag_and_drop.js"></script>
+  <script src="../javascript/setup_tabs.js"></script>
 </body>
 </html>

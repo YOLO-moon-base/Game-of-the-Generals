@@ -54,3 +54,16 @@ td {
 #opponent_time_left {
   margin-top: 0.75vw;
 }
+
+#setup_tabs {
+  width: 20vw;
+  height: 45vw;
+
+  position: fixed;
+  top: 50%;
+  right: 2.5%;
+  transform: translate( 0, -50%);
+
+  border: 2px solid black;
+  border-radius: 5px;
+}
