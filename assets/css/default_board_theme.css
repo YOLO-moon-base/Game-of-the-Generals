@@ -1,3 +1,6 @@
+
+/* CSS FOR THE GAME BOARD */
+
 table, td, tr {
   border: 2px solid black;
   border-collapse: collapse;
@@ -14,6 +17,9 @@ td {
   height: 5vw;
   width: 5vw;
 }
+
+
+/* CSS FOR THE GAME TIMER */
 
 #Game_timer {
   width: 20vw;
@@ -55,6 +61,9 @@ td {
   margin-top: 0.75vw;
 }
 
+
+/* CSS FOR THE GAME SETUP TABS */
+
 #setup_tabs {
   width: 20vw;
   height: 45vw;
@@ -67,3 +76,28 @@ td {
   border: 2px solid black;
   border-radius: 5px;
 }
+
+  .tabcontent {
+    animation: fade_effect 1s; 
+  }
+
+  @keyframes fade_effect {
+    from {opacity: 0;}
+    to {opacity: 1;}
+  }
+
+  button {
+    border:none;
+    border-radius: 3px;
+
+    width: 5vw;
+    height: 2vw;
+  }
+
+  .game_piece {
+    border: 1px solid black;
+    margin: 1vw;
+    
+    height: 4vw;
+    width: 4vw;
+  }
