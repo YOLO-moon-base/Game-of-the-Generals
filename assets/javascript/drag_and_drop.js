@@ -1,7 +1,7 @@
 function allowDrop(ev) {
   ev.preventDefault();
 }
-
+/* 
 function drag(ev) {
   ev.dataTransfer.setData("img", ev.target.id);
 }
@@ -10,7 +10,7 @@ function drag(ev) {
   var img = document.createElement("img");
   img.src = "../images/invis.png";
   e.dataTransfer.setDragImage(img, 0, 0);
-  }, false);
+  }, false); */
 
 function drop(ev) {
   ev.preventDefault();
