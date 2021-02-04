@@ -1,3 +1,4 @@
+
 /* CSS FOR THE GAME BOARD */
 
 table, td, tr {
@@ -76,6 +77,49 @@ td {
   border-radius: 5px;
 }
 
+.tabcontent {
+  margin: 0.5vw;
+  text-align: center;
+
+  animation: fade_effect 1s;
+}
+
+@keyframes fade_effect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+button {
+  width: 5vw;
+  height: 2vw;
+
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+  button.active {
+    background-color:lightgray;
+  }
+
+
+.tab {
+  width: 20vw;
+  height: 2vw;
+
+  background-color: grey;
+}
+
+.game_piece {
+  border: 1px solid black;
+  margin: 1vw;
+  
+  height: 4vw;
+  width: 4vw;
+}
+
+=======
   .tabcontent {
     animation: fade_effect 1s; 
   }
@@ -100,5 +144,6 @@ td {
     height: 4vw;
     width: 4vw;
   }
+
 
 
