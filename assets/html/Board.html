@@ -27,7 +27,10 @@
     <div id="setup" class="tabcontent">
       <h3>Manual Setup</h3>
 
-        <img id="piece" src="../images/Philippines.png" draggable="true" ondragstart="drag(event)" width="90px">
+        <!--Game Pieces and their containers-->
+        <div class="game_piece" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img id="piece" src="../images/Philippines.png" draggable="true" ondragstart="drag(event)" width="90px">
+        </div>
 
     </div>
     
