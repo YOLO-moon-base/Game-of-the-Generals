@@ -20,14 +20,27 @@
   <!--Setup Tabs-->
     <!--Tab Buttons-->
   <div id="setup_tabs">
-    <button class="tablinks" onclick="open_tab(event, 'setup')" id="default_tab">Setup</button>
-    <button class="tablinks" onclick="open_tab(event, 'layouts')">Layouts</button>
+    <div class="tab">
+      <button class="tablinks" onclick="open_tab(event, 'setup')" id="default_tab">Setup</button>
+      <button class="tablinks" onclick="open_tab(event, 'layouts')">Layouts</button>
+    </div>
 
     <!--Tab Contents-->
     <div id="setup" class="tabcontent">
       <h3>Manual Setup</h3>
 
+      <!--Game Pieces and their containers-->
+      <div class="game_piece" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="flag_piece" src="../images/Philippines.png" draggable="true" ondragstart="drag(event)" width="90px">
+      </div>
+
+      <div class="game_piece" ondrop="drop(event)" ondragover="allowDrop(event)">
+        <img id="general_piece" src="../images/Philippines.png" draggable="true" ondragstart="drag(event)" width="90px">
+      </div>
+
+      <div class="game_piece" ondrop="drop(event)" ondragover="allowDrop(event)">
         <img id="piece" src="../images/Philippines.png" draggable="true" ondragstart="drag(event)" width="90px">
+      </div>
 
     </div>
     
@@ -36,6 +49,7 @@
         <p>saved setup 1</p>
         <p>saved setup 2</p>
     </div>
+
   </div>
 
  

@@ -77,27 +77,47 @@ td {
   border-radius: 5px;
 }
 
-  .tabcontent {
-    animation: fade_effect 1s; 
+.tabcontent {
+  margin: 0.5vw;
+  text-align: center;
+
+  animation: fade_effect 1s;
+}
+
+@keyframes fade_effect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+button {
+  width: 5vw;
+  height: 2vw;
+
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+}
+  button.active {
+    background-color:lightgray;
   }
 
-  @keyframes fade_effect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
 
-  button {
-    border:none;
-    border-radius: 3px;
+.tab {
+  width: 20vw;
+  height: 2vw;
 
-    width: 5vw;
-    height: 2vw;
-  }
+  background-color: grey;
+}
 
-  .game_piece {
-    border: 1px solid black;
-    margin: 1vw;
-    
-    height: 4vw;
-    width: 4vw;
-  }
+.game_piece {
+  border: 1px solid black;
+  margin: 1vw;
+  
+  height: 4vw;
+  width: 4vw;
+}
+
+
+
