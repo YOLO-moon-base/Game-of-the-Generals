@@ -1,0 +1,64 @@
+body {
+  background-color: black;
+}
+
+#game_selection_area {
+  background-color: white;
+
+  
+  top: 0.5vw;
+  left: 0.8vw;
+  position: absolute;
+  height: 98%;
+  width: 44%;
+
+  clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)
+}
+
+#game_updates {
+  top: 0;
+  right: 0;
+
+  position: absolute;
+  width: 68%;
+  height: 100%;
+  box-sizing: border-box;
+  border-left: 30vw;
+  border-bottom: 100%;
+
+  background-color: white;
+
+  clip-path: polygon(20% 0, 100% 0, 100% 100%, 3.5% 100%)
+
+}
+
+/* GAME OPTIONS */
+
+#game_title {
+    font-size: 3vw;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    margin-top: 3vw;
+    margin-bottom: 5vw;
+
+    border: 0.4vw solid black;
+    height: 7vw;
+    width: 40vw;
+}
+
+.options {
+  font-size: 2vw;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: 5vw;
+
+  border: 0.3vw solid black;
+  height: 5vw;
+  width: 25vw;
+}
