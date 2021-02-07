@@ -15,7 +15,7 @@ body {
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)
 }
 
-#game_updates {
+#homescreen_right {
   top: 0;
   right: 0;
 
@@ -47,6 +47,7 @@ body {
     margin-bottom: 5vw;
 
     border: 0.4vw solid black;
+    border-left: none;
     height: 7vw;
     width: 35vw;
 }
@@ -70,4 +71,42 @@ body {
 
     font-family: steelfish_rg;
     font-size: 3vw;
+    letter-spacing: 0.05vw;
+  }
+
+/* GAME RANK */
+#game_rank {
+  position: absolute;
+
+  border: 1px solid black;
+  top: 4vw;
+  right: 0;
+}
+
+/*hexagone made by placing 2 traingles ontop and below a rectangle*/
+/* calculator : https://www.omnicalculator.com/math/hexagon */
+#outer_hexagon {
+  /* The rectangle */
+  position: relative;
+  width: 6.928vw;
+  height: 4vw;
+  background: lightgreen;
+  margin: 1vw;
+}
+  /* Width of the 2 triangles on the rectangle */
+  #outer_hexagon::before,
+  #outer_hexagon::after {
+    content: "";
+    position: absolute;
+    border-left: 3.464vw solid transparent;
+    border-right: 3.464vw solid transparent;
+  }
+  /* Height of the 2 triangles *2 on the rectangle */
+  #outer_hexagon::before {
+    bottom: 100%;
+    border-bottom: 2vw solid lightgreen;
+  }
+  #outer_hexagon::after {
+    top: 100%;
+    border-top: 2vw solid lightgreen;
   }
