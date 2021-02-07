@@ -76,37 +76,101 @@ body {
 
 /* GAME RANK */
 #game_rank {
-  position: absolute;
+  position: fixed;
 
-  border: 1px solid black;
-  top: 4vw;
+  top: 2.5vw;
   right: 0;
 }
 
-/*hexagone made by placing 2 traingles ontop and below a rectangle*/
+/*hexagone made by placing 2 traingles (but not really) ontop and below a rectangle*/
 /* calculator : https://www.omnicalculator.com/math/hexagon */
-#outer_hexagon {
+/* 
+  FORMULA FORHEXAGON VALUES
+
+   height of rectangle = side length
+   width of recatngle = s 
+   border-left & right = s/2 
+   border-bottom & top = sqrt(side^2 - (s/2)^2 )*2 
+*/
+#inner_hexagon {
   /* The rectangle */
   position: relative;
   width: 6.928vw;
   height: 4vw;
   background: lightgreen;
   margin: 1vw;
+  z-index: 3;
+}
+  /* Width of the 2 triangles on the rectangle */
+  #inner_hexagon::before,
+  #inner_hexagon::after {
+    content: "";
+    position: absolute;
+    border-left: 3.464vw solid transparent;
+    border-right: 3.464vw solid transparent;
+    z-index: 3;
+  }
+  /* Height of the 2 triangles *2 on the rectangle */
+  #inner_hexagon::before {
+    bottom: 100%;
+    border-bottom: 2vw solid lightgreen;
+  }
+  #inner_hexagon::after {
+    top: 100%;
+    border-top: 2vw solid lightgreen;
+  }
+
+#outer_hexagon {
+  /* The rectangle */
+  position: relative;
+  width: 8.66vw;
+  height: 5vw;
+  background: dodgerblue;
+  margin: 1vw;
+  z-index: 2;
+  transform: rotate(90deg);
 }
   /* Width of the 2 triangles on the rectangle */
   #outer_hexagon::before,
   #outer_hexagon::after {
     content: "";
     position: absolute;
-    border-left: 3.464vw solid transparent;
-    border-right: 3.464vw solid transparent;
+    border-left: 4.33vw solid transparent;
+    border-right: 4.33vw solid transparent;
+    z-index: 2;
   }
   /* Height of the 2 triangles *2 on the rectangle */
   #outer_hexagon::before {
     bottom: 100%;
-    border-bottom: 2vw solid lightgreen;
+    border-bottom: 2.5vw solid dodgerblue;
   }
   #outer_hexagon::after {
     top: 100%;
-    border-top: 2vw solid lightgreen;
+    border-top: 2.5vw solid dodgerblue;
   }
+
+/* STYLING FOR THE HEXAGONS*/
+
+#inner_hexagon {
+  top: 0.5vw;
+}
+
+#player_name {
+  position: fixed;
+
+  top: 4vw;
+  right: 9vw;
+
+  height: 4vw;
+  width: 20vw;
+  border: 0.5vw solid black;
+  border-right: none;
+}
+
+#player_name > h3 {
+  position: relative;
+  font-family: acherus_militant;
+  font-size: 1.2vw;
+  text-align: center;
+  top: -0.2vw;
+}
