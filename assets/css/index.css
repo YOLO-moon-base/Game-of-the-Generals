@@ -78,8 +78,8 @@ body {
 #game_rank {
   position: fixed;
 
-  top: 2.5vw;
-  right: 0;
+  top: 1.5vw;
+  right: 1vw;
 }
 
 /*hexagone made by placing 2 traingles (but not really) ontop and below a rectangle*/
@@ -87,16 +87,16 @@ body {
 /* 
   FORMULA FORHEXAGON VALUES
 
-   height of rectangle = side length
+   height of rectangle = side length 
    width of recatngle = s 
    border-left & right = s/2 
-   border-bottom & top = sqrt(side^2 - (s/2)^2 )*2 
+   border-bottom & top = sqrt(side^2 - (s/2)^2 )
 */
 #inner_hexagon {
   /* The rectangle */
   position: relative;
-  width: 6.928vw;
-  height: 4vw;
+  width: 5.196vw;
+  height: 3vw;
   background: lightgreen;
   margin: 1vw;
   z-index: 3;
@@ -106,25 +106,25 @@ body {
   #inner_hexagon::after {
     content: "";
     position: absolute;
-    border-left: 3.464vw solid transparent;
-    border-right: 3.464vw solid transparent;
+    border-left: 2.598vw solid transparent;
+    border-right: 2.598vw solid transparent;
     z-index: 3;
   }
   /* Height of the 2 triangles *2 on the rectangle */
   #inner_hexagon::before {
     bottom: 100%;
-    border-bottom: 2vw solid lightgreen;
+    border-bottom: 1.5vw solid lightgreen;
   }
   #inner_hexagon::after {
     top: 100%;
-    border-top: 2vw solid lightgreen;
+    border-top: 1.5vw solid lightgreen;
   }
 
 #outer_hexagon {
   /* The rectangle */
   position: relative;
-  width: 8.66vw;
-  height: 5vw;
+  width: 6.928vw;
+  height: 4vw;
   background: dodgerblue;
   margin: 1vw;
   z-index: 2;
@@ -135,18 +135,18 @@ body {
   #outer_hexagon::after {
     content: "";
     position: absolute;
-    border-left: 4.33vw solid transparent;
-    border-right: 4.33vw solid transparent;
+    border-left: 3.464vw solid transparent;
+    border-right: 3.464vw solid transparent;
     z-index: 2;
   }
   /* Height of the 2 triangles *2 on the rectangle */
   #outer_hexagon::before {
     bottom: 100%;
-    border-bottom: 2.5vw solid dodgerblue;
+    border-bottom: 2vw solid dodgerblue;
   }
   #outer_hexagon::after {
     top: 100%;
-    border-top: 2.5vw solid dodgerblue;
+    border-top: 2vw solid dodgerblue;
   }
 
 /* STYLING FOR THE HEXAGONS*/
@@ -158,8 +158,8 @@ body {
 #player_name {
   position: fixed;
 
-  top: 4vw;
-  right: 9vw;
+  top: 2.5vw;
+  right: 8vw;
 
   height: 4vw;
   width: 20vw;
@@ -173,4 +173,88 @@ body {
   font-size: 1.2vw;
   text-align: center;
   top: -0.2vw;
+}
+
+/* STYLING FOR UPDATES */
+#updates {
+  position: absolute;
+  top: 8.5vw;
+  right: 8.5vw;
+
+  width: 40vw;
+  height: 18vw;
+
+  border-radius: 1vw;
+  border: 0.25vw solid black;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+#panels {
+  position: absolute;
+  margin-right: auto;
+  margin-left: auto;
+
+  width: 38vw;
+  height: 16vw;
+
+  border: 2px solid black;
+}
+
+/* STYLING FOR SHOP */
+#shop {
+  position: absolute;
+  top: 29vw;
+  right: 8.5vw;
+
+  width: 40vw;
+  height: 14vw;
+
+  border-radius: 1vw;
+  border: 0.25vw solid black;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+#shop-item {
+  width: 12vw;
+  height: 12vw;
+
+  border: 0.2vw solid black;
+  border-radius: 15px;
+}
+
+#shop-item-center {
+  width: 12vw;
+  height: 12vw;
+  border: 0.2vw solid black;
+  border-radius: 15px;
+
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+
+#item-price {
+  width: 10vw;
+  height: 3vw;
+  border: 0.2vw solid black;
+  border-radius: 15px;
+
+  margin-top: 8vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+#item-price > h4 {
+  font-family: acherus_militant;
+  font-size: 1.5vw;
+  text-align: center;
 }
