@@ -206,6 +206,10 @@ body {
   height: 16vw;
 
   border: 2px solid black;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
 }
 
 /* STYLING FOR SHOP */
@@ -262,6 +266,55 @@ body {
   font-family: acherus_militant;
   font-size: 1.5vw;
   text-align: center;
+}
+
+#socials_and_bug_report{
+  position: absolute;
+  width: 12vw;
+  height: 3.5vw;
+
+  border: 0.2vw solid black;
+  border-radius: 1.25vw;
+
+  bottom: 1vw;
+  right: 2vw;
+
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+#icon {
+  height: 2.5vw;
+  width: 2.5vw;
+  border: 2px solid black;
+}
+
+#middle_icon {
+  height: 2.5vw;
+  width: 2.5vw;
+  border: 2px solid black;
+
+  margin-left: 0.75vw;
+  margin-right: 0.75vw;
+}
+
+/* TITLE WORDS STYLING */
+
+#panel_title {
+  position: absolute;
+  font-family: steelfish_rg;
+  font-size: 2.5vw;
+
+  top: -7vw;
+  left: -2.5vw;
+
+  color: dodgerblue;
+  text-shadow: -0.25vw 0.25vw black;
+
+  transform: rotate(-10deg);
+
+  z-index: 2;
 }
 
 #popUpsCont {
