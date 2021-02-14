@@ -11,6 +11,7 @@ body {
   position: absolute;
   height: 98%;
   width: 44%;
+  z-index: 9;
 
   clip-path: polygon(0 0, 100% 0, 75% 100%, 0 100%)
 }
@@ -59,18 +60,22 @@ body {
   align-items: center;
 
   margin-left: 5vw;
-  margin-bottom: 1vw;
+  margin-bottom: 1.5vw;
 
   border: 0.3vw solid black;
   height: 5vw;
   width: 25vw;
+  
+  cursor: pointer;
 }
-  .options > a {
+  
+  .options > p {
     text-decoration: none;
     color: black;
 
     font-family: steelfish_rg;
     font-size: 3vw;
+	font-weight: bold;
     letter-spacing: 0.05vw;
   }
 
@@ -257,4 +262,31 @@ body {
   font-family: acherus_militant;
   font-size: 1.5vw;
   text-align: center;
+}
+
+#popUpsCont {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+}
+
+.popUps {
+	position: absolute;
+	width: 500px;
+	height: 300px;
+	background-color: blue;
+	z-index: 10;
+	opacity: 0;
+	visibility: hidden;
+	transition: opacity .2s;
+}
+
+.closePopUp {
+	float: right;
+	cursor: pointer;
 }
