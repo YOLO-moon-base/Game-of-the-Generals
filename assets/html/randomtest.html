@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random</title>
+</head>
+<body>
+  <h1 id="one"></h1>
+  <h1 id="two"></h1>
+  <h1 id="three"></h1>
+  <h1 id="four"></h1>
+  <h1 id="five"></h1>
+  <h1 id="six"></h1>
+  <h1 id="seven"></h1>
+  <h1 id="eight"></h1>
+  <h1 id="nine"></h1>
+  <h1 id="ten"></h1>
+
+  <script> 
+  var a=0;
+  var b=0;
+  var c=0;
+  var d=0;
+  var e=0;
+  var f=0;
+  var g=0;
+  var h=0;
+  var j=0;
+  var k=0;
+
+  for (var i = 0 ; i < 1000000 ; i++){
+    var x = Math.floor(Math.random()*7)+1;
+    switch (x) {
+      case 1: 
+        a++;
+        break;
+      case 2: 
+        b++;
+        break;
+      case 3: 
+        c++;
+        break;
+      case 4: 
+        d++;
+        break;
+      case 5:
+        e++;
+        break;
+      case 6: 
+        f++;
+        break;
+      case 7: 
+        g++;
+        break;
+      case 8: 
+        h++;
+        break;
+      case 9: 
+        j++
+        break;
+      case 10:
+        k++
+        break;
+    }
+    document.getElementById("one").innerHTML= "One: " + a + " Percent: " + ((a/i)*100).toFixed(2) + "%";
+    document.getElementById("two").innerHTML= "Two: " + b + " Percent: " + ((b/i)*100).toFixed(2) + "%";
+    document.getElementById("three").innerHTML= "Three: " + c + " Percent: " + ((c/i)*100).toFixed(2) + "%";
+    document.getElementById("four").innerHTML= "Four: " + d + " Percent: " + ((d/i)*100).toFixed(2) + "%";
+    document.getElementById("five").innerHTML= "Five: " + e + " Percent: " + ((e/i)*100).toFixed(2) + "%";
+    document.getElementById("six").innerHTML= "Six: " + f + " Percent: " + ((f/i)*100).toFixed(2) + "%";
+    document.getElementById("seven").innerHTML= "Seven: " + g + " Percent: " + ((g/i)*100).toFixed(2) + "%";
+    document.getElementById("eight").innerHTML= "Eight: " + h + " Percent: " + ((h/i)*100).toFixed(2) + "%";
+    document.getElementById("nine").innerHTML= "Nine: " + j + " Percent: " + ((j/i)*100).toFixed(2) + "%";
+    document.getElementById("ten").innerHTML= "Ten: " + k + " Percent: " + ((k/i)*100).toFixed(2) + "%";
+  }
+  </script>
+</body>
+</html>
