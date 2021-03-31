@@ -40,6 +40,11 @@ body {
 
   font-size: 1vw;
   font-weight: bold;
+
+  cursor: pointer;
+  /* Animation */
+  transition: all 200ms ease-in-out;
+
 }
 .tab_header > div.active {
   border-left: 0.2vw solid blue;
@@ -57,6 +62,11 @@ body {
   top: -50vh;
   left: 10vw;
   opacity: 0;
+
+  /* Animation */
+  transition: opacity 200ms ease-in-out 0ms,
+              left 300ms ease-in-out 0ms,
+              top 0ms ease-in-out 3000ms;
 }
 
 .tab_content > div.active {
@@ -65,5 +75,7 @@ body {
   opacity: 1;
 
   /* Animation */
-  transition: opacity;
+  transition: opacity 200ms ease-in-out 0ms,
+              left 300ms ease-in-out 0ms,
+              top 0ms ease-in-out 0ms;
 }
