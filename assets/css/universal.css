@@ -11,7 +11,9 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
  * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 
-/* Custom FOnt Addins */
+
+ 
+/* Custom Font Addins */
 
  @font-face {
   font-family: steelfish_outline;
